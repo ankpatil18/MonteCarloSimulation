@@ -8,7 +8,7 @@
  Bottom 10 Percentile   : 109601.45 
  
             Conservative                                  
- Conservative Median    : 190813.13
+ Conservative Median    : 190813.13             
  Top 10 Percentile      : 242270.51     
  Bottom 10 Percentile   : 154686.08 
                        
