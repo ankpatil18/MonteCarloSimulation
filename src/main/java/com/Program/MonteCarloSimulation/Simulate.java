@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Simulate{
- 	public static final Double USER_INITIAL_AMOUNT = 100000.00;
+    public static final Double USER_INITIAL_AMOUNT = 100000.00;
     public static final Integer NUMBER_OF_SIMULATION = 10000;
     public static final Integer NUMBER_OF_YEARS= 20;
     public static final Double AGGRESSIVE_MEAN_RETURN= 9.4324;
@@ -27,7 +27,7 @@ public class Simulate{
             double utilityRate = meanReturnRandom  - NORMALIZING_FACTOR * Math.pow(riskStandardDeveiationRandom,2) * riskAversionFactor;
             simulationResult[i] = getResult(utilityRate);
         }
-		return simulationResult;
+	return simulationResult;
     }
 
     public static Double getResult(double utilityRate) {
@@ -45,7 +45,7 @@ public class Simulate{
         int meanRate = 6;
         conservativeSimulationResult = simulator.startSimulation(conservativeSimulationResult, meanRate, CONSERVATIVE_MEAN_RETURN,CONSERVATIVE_RISK_STANDARD_DEVIATION, RISK_AVERSION_CONSERVATIVE_COEFFICENT);
         Arrays.sort(conservativeSimulationResult);
-		return conservativeSimulationResult;
+	return conservativeSimulationResult;
     }
 
     public double[] calculateAggressiveSimulation() {
@@ -54,6 +54,6 @@ public class Simulate{
     	double[] aggressiveSimulationResult = new double[NUMBER_OF_SIMULATION];
         aggressiveSimulationResult = simulator.startSimulation(aggressiveSimulationResult,meanRate,AGGRESSIVE_MEAN_RETURN,AGGRESSIVE_RISK_STANDARD_DEVIATION,RISK_AVERSION_AGGRESIVE_COEFFICENT);
         Arrays.sort(aggressiveSimulationResult);
-		return aggressiveSimulationResult; 
+	return aggressiveSimulationResult; 
     }
 }
